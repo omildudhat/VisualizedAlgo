@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>algoVisualizer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+  <script src="grid.js"></script>
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <div id="nav">
+    <button onclick="reset()">Reset</button>
+    <button onclick="genMaze()">Generate Maze</button>
+
+    <details class="custom-select">
+      <summary class="radios">
+        <input type="radio" name="item" id="default" title="Select an Algorithm" checked>
+        <input type="radio" name="item" id="dfs" title="Depth-First Search">
+        <input type="radio" name="item" id="bfs" title="Breadth-First Search">
+        <input type="radio" name="item" id="gbfs" title="Greedy Best First Search">
+        <input type="radio" name="item" id="astar" title="A* Search">
+        <input type="radio" name="item" id="dijkstra" title="Dijkstra Algorithm">
+      </summary>
+      <ul class="list">
+        <li>
+          <label for="dfs">Depth-First Search</label>
+        </li>
+        <li>
+          <label for="bfs">Breadth-First Search</label>
+        </li>
+        <li>
+          <label for="gbfs">Greedy Best First Search</label>
+        </li>
+        <li>
+          <label for="astar">A* Search</label>
+        </li>
+        <li>
+          <label for="dijkstra">Dijkstra Algorithm</label>
+        </li>
+      </ul>
+    </details>
+    <button id="start" onclick="visualize(1)">Start</button>
+  </div>
+
+  <div id="canvas"></div>
+</body>
+
+</html>
